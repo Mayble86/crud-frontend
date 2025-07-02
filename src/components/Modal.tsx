@@ -1,5 +1,11 @@
 import React from 'react';
-interface ModalProps { open: boolean; onClose: () => void; children: React.ReactNode }
+
+interface ModalProps {
+    open: boolean;
+    onClose: () => void;
+    children: React.ReactNode
+}
+
 export const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
     if (!open) return null;
     return (
